@@ -5,9 +5,10 @@
       "App\\Controllers\\": "app/controllers/",
       "App\\Core\\": "app/core/",
       "App\\Models\\": "app/models/",
-      "App\\Services\\":"app/services/",
-      "App\\Utilities\\":"app/utilities/",
+      "App\\Services\\": "app/services/",
+      "App\\Utilities\\": "app/utilities/",
       "Config\\": "config/",
+      "Src\\": "src/",
       "Tests\\": "tests/"
     }
   },
