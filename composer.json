@@ -8,7 +8,6 @@
       "App\\Services\\": "app/services/",
       "App\\Utilities\\": "app/utilities/",
       "Config\\": "config/",
-      "Src\\": "src/",
       "Tests\\": "tests/"
     }
   },
