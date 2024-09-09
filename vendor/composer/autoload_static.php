@@ -16,10 +16,6 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         array (
             'Tests\\' => 6,
         ),
-        'S' => 
-        array (
-            'Src\\' => 4,
-        ),
         'P' => 
         array (
             'PhpParser\\' => 10,
@@ -37,6 +33,7 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
             'App\\Utilities\\' => 14,
             'App\\Services\\' => 13,
             'App\\Models\\' => 11,
+            'App\\Interfaces\\' => 15,
             'App\\Core\\' => 9,
             'App\\Controllers\\' => 16,
             'App\\' => 4,
@@ -47,10 +44,6 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         'Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
-        ),
-        'Src\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'PhpParser\\' => 
         array (
@@ -76,6 +69,10 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         array (
             0 => __DIR__ . '/../..' . '/app/models',
         ),
+        'App\\Interfaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/interfaces',
+        ),
         'App\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/core',
@@ -91,6 +88,11 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
     );
 
     public static $classMap = array (
+        'App\\Core\\App' => __DIR__ . '/../..' . '/app/core/App.php',
+        'App\\Core\\Request' => __DIR__ . '/../..' . '/app/core/Request.php',
+        'App\\Core\\Router' => __DIR__ . '/../..' . '/app/core/Router.php',
+        'App\\Interfaces\\RequestInterfaces' => __DIR__ . '/../..' . '/app/interfaces/RequestInterfaces.php',
+        'App\\Interfaces\\RouterInterface' => __DIR__ . '/../..' . '/app/interfaces/RouterInterface.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',

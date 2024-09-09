@@ -6,6 +6,11 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Core\\App' => $baseDir . '/app/core/App.php',
+    'App\\Core\\Request' => $baseDir . '/app/core/Request.php',
+    'App\\Core\\Router' => $baseDir . '/app/core/Router.php',
+    'App\\Interfaces\\RequestInterfaces' => $baseDir . '/app/interfaces/RequestInterfaces.php',
+    'App\\Interfaces\\RouterInterface' => $baseDir . '/app/interfaces/RouterInterface.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
