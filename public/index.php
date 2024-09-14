@@ -22,10 +22,10 @@ $app = new App($router);
 // Route for the '/home' path, handled by the index method of HomeController
 $app->router->get('/home', [HomeController::class, 'index']);
 // Route for the '/home/{id}' path, handled by the test method of HomeController
-$app->router->get('/home/{id}', [HomeController::class, 'test']);
+// $app->router->get('/home/{id}', [HomeController::class, 'test']);
 // Route for the root path '/', returns a simple "hello world" string
 $app->router->get('/', function () {
-    return "hello world";
+    return "home";
 });
 // Run the application, resolving the request and sending the response
 $app->run();
