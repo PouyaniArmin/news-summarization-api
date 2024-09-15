@@ -2,6 +2,8 @@
 
 use App\Controllers\HomeController;
 use App\Core\App;
+use App\Core\Config;
+use App\Core\NewsApiService;
 use App\Core\Request;
 use App\Core\Response;
 use App\Core\Router;
@@ -16,16 +18,10 @@ $response = new Response;
 $router = new Router($request, $response);
 
 //Initialize the App with the Router
-$app = new App($router);
+$app = new App(dirname(__DIR__),$router);
 
 // Define routes for the application
-// Route for the '/home' path, handled by the index method of HomeController
 $app->router->get('/home', [HomeController::class, 'index']);
-// Route for the '/home/{id}' path, handled by the test method of HomeController
-// $app->router->get('/home/{id}', [HomeController::class, 'test']);
-// Route for the root path '/', returns a simple "hello world" string
-$app->router->get('/', function () {
-    return "home";
-});
+
 // Run the application, resolving the request and sending the response
 $app->run();
