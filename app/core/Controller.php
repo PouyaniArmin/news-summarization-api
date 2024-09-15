@@ -4,8 +4,8 @@ namespace App\Core;
 
 class Controller{
 
-    public function renderView(string $view,array $data=[]):void{
+    public function renderView(string $view,array $data=[]){
         $view=new View($view,$data);
-        $view->render();
+        return $view->render();
     }
 }
