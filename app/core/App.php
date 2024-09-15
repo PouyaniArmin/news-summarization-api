@@ -18,13 +18,15 @@ class App
      * @var Router $router An instance of the Router class used for routing requests.
      */
     public Router $router;
+    public static $rootPath;
     /**
      * App constructor.
      * 
      * @param Router $router An instance of the Router class to handle routing.
      */
-    public function __construct(Router $router)
+    public function __construct(string $rootPath,Router $router)
     {
+        self::$rootPath=$rootPath;
         $this->router = $router;
     }
     /**
