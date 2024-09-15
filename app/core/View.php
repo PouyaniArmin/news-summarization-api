@@ -8,6 +8,7 @@ class View
 {
     protected string $view;
     protected $data = [];
+    public string $layout = 'main';
     /**
      * Constructor to initialize the view and data.
      * 
@@ -26,17 +27,40 @@ class View
      * 
      * @return void
      */
-    public function render(): void
+    public function render()
+    {
+        $layout = $this->renderLayout();
+        $view = $this->renderOnlyView();
+        return str_replace("{{content}}", $view, $layout);
+    }
+
+    private function renderLayout()
+    {
+        $file = __DIR__ . "/../views/layouts/{$this->layout}.php";
+        if (file_exists($file)) {
+            ob_start();
+            include $file;
+            return ob_get_clean();
+        } else {
+            ErrorHandler::error('layout file not found: ' . $file);
+        }
+    }
+
+    private function renderOnlyView()
     {
         $file = __DIR__ . "/../views/{$this->view}.php";
         if (file_exists($file)) {
             ob_start();
             extract($this->data);
             include $file;
-            $content = ob_get_clean();
-            echo $content;
+            return ob_get_clean();
         } else {
             ErrorHandler::error("View file not found: $file");
         }
+    }
+
+    public function setLayout(string $layout): void
+    {
+        $this->layout = $layout;
     }
 }
