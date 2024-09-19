@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\HomeController;
+use App\Controllers\SummarizeController;
 use App\Core\App;
 use App\Core\Config;
 use App\Core\NewsApiService;
@@ -21,7 +22,9 @@ $router = new Router($request, $response);
 $app = new App(dirname(__DIR__),$router);
 
 // Define routes for the application
-$app->router->get('/home', [HomeController::class, 'index']);
+$app->router->get('/', [HomeController::class, 'index']);
+
+$app->router->get('/api/{id}',[SummarizeController::class,'index']);
 
 // Run the application, resolving the request and sending the response
 $app->run();
