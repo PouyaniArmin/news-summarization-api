@@ -27,14 +27,14 @@ class View
      * 
      * @return void
      */
-    public function render()
+    public function render():string
     {
         $layout = $this->renderLayout();
         $view = $this->renderOnlyView();
         return str_replace("{{content}}", $view, $layout);
     }
 
-    private function renderLayout()
+    protected function renderLayout():string
     {
         $file = __DIR__ . "/../views/layouts/{$this->layout}.php";
         if (file_exists($file)) {
@@ -46,7 +46,7 @@ class View
         }
     }
 
-    private function renderOnlyView()
+    protected function renderOnlyView():string
     {
         $file = __DIR__ . "/../views/{$this->view}.php";
         if (file_exists($file)) {
