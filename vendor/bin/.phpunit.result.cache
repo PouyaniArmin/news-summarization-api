@@ -1,1 +1,1 @@
-{"version":1,"defects":{"Tests\\RouterTest::testGetRouteCallbackIsExecuted":8},"times":{"Tests\\RouterTest::testCanRegisterGetRouter":0.069,"Tests\\RouterTest::testGetRouteCallbackIsExecuted":0.08}}
+{"version":1,"defects":{"Tests\\RouterTest::testGetRouteCallbackIsExecuted":8,"Tests\\ViewTest::testRender":7,"Tests\\ViewTest::testSetLayout":8},"times":{"Tests\\RouterTest::testCanRegisterGetRouter":0.069,"Tests\\RouterTest::testGetRouteCallbackIsExecuted":0.08,"Tests\\ViewTest::testRender":0.02,"Tests\\ViewTest::testSetLayout":0.002}}
