@@ -62,14 +62,12 @@ class Request implements RequestInterfaces
         $data = [];
         if ($this->isGet()) {
             foreach ($_GET as $key => $value) {
-                // $data[$key] = filter_input(INPUT_GET, $key, FILTER_SANITIZE_SPECIAL_CHARS) ?? null;
-                $data[$key] = filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS) ?? null;
+                $data[$key] = filter_input(INPUT_GET, $key, FILTER_SANITIZE_SPECIAL_CHARS) ?? null;
             }
         }
         if ($this->isPost()) {
             foreach ($_POST as $key => $value) {
-                // $data[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS) ?? null;
-                $data[$key] = filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS) ?? null;
+                $data[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS) ?? null;
             }
         }
         return $data;
