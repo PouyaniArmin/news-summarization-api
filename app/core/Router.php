@@ -84,7 +84,7 @@ class Router implements RouterInterface
             $routerpattern = $this->getPatternFromRoute($route);
             if ($this->matchRoute($routerpattern, $path, $matches)) {
                 array_shift($matches);
-                return $this->handelCallback($callback, $matches);
+                return $this->handleCallback($callback, $matches);
             }
         }
         $this->response->setStatusCode(404);
@@ -124,7 +124,7 @@ class Router implements RouterInterface
      * 
      * @return mixed The result of the callback execution.
      */
-    private function handelCallback($callback, $matches)
+    private function handleCallback($callback, $matches)
     {
         if (is_array($callback)) {
             return $this->handleControllerCallback($callback, $matches);

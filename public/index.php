@@ -22,7 +22,7 @@ $router = new Router($request, $response);
 $app = new App(dirname(__DIR__),$router);
 
 // Define routes for the application
-$app->router->get('/', [HomeController::class, 'index']);
+$app->router->get('/home', [HomeController::class, 'index']);
 
 $app->router->get('/api/{id}',[SummarizeController::class,'index']);
 

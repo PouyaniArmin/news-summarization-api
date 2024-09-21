@@ -25,13 +25,13 @@ interface RequestInterfaces
      *
      * @return bool True if the method is GET, false otherwise.
      */
-    public function isGet(): string;
+    public function isGet(): bool;
     /**
      * Checks if the HTTP method is POST.
      *
      * @return bool True if the method is POST, false otherwise.
      */
-    public function isPost(): string;
+    public function isPost(): bool;
     /**
      * Retrieves and sanitizes the request data (GET or POST).
      *
