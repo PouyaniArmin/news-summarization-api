@@ -6,7 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'voku\\' => array($vendorDir . '/voku/portable-utf8/src/voku', $vendorDir . '/voku/portable-ascii/src/voku'),
+    'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku', $vendorDir . '/voku/portable-utf8/src/voku'),
     'Yooper\\' => array($vendorDir . '/yooper/nicknames/src'),
     'Wamania\\Snowball\\' => array($vendorDir . '/wamania/php-stemmer/src'),
     'TextAnalysis\\' => array($vendorDir . '/yooper/php-text-analysis/src'),
