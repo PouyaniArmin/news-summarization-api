@@ -1,16 +1,47 @@
-# news-summarization-api
-A PHP-based API for analyzing and summarizing news articles. It provides concise and meaningful summaries from various news sources, helping users quickly digest key information.
+# 📰 News Summarization API  
 
-## Features
+A lightweight PHP-based API that fetches news articles using the **GNews API** and generates short summaries of their content.  
+Built with a modular architecture inspired by MVC for easy scalability and future AI model integration.
+## ⚙️ Installation & Setup  
 
-- **Article Fetching**: Retrieve news articles from multiple sources.
-- **Summarization**: Generate short summaries from full news articles.
-- **Configurable**: Easily adjustable and extendable to meet different needs.
-## Dependencies
+1. **Clone the repository:**  
+   ```bash
+   git clone https://github.com/PouyaniArmin/news-summarization-api.git
+   cd news-summarization-api
+   ```
+## Install dependencies
+    ```bash
+    composer install
+    ```
+## Run the project on a local server
+    ```bash
+    php -S localhost:8000 -t public
+    ```
+## 🚀 How It Works  
 
-This project requires the following:
+- **`/home`**  
+  Fetches and displays the latest news articles from GNews API.  
 
-- **PHP**: Version 8.3 or higher.
-- **PHPUnit**: Version 11.3 for running tests.
+- **`/api/{id}`**  
+  Fetches the selected article by its ID, extracts the main content, and returns a summarized version of it.
+## 🔑 API Key Setup  
 
-Ensure you have these dependencies installed to work with the project.
+This project uses the [GNews API](https://gnews.io/) to fetch news data.  
+To make it work, you need to get a free API key:
+
+1. Go to [https://gnews.io/](https://gnews.io/)  
+2. Sign up for a free account  
+3. Copy your API key  
+4. Paste it inside the `.env` file as shown above
+## 📂 Project Structure  
+App/
+ ├── Core/              # Core components (Router, Request, Controller, etc.)
+ ├── Controllers/       # Controllers handling the main logic
+ ├── Utilities/         # Utility and helper classes (like ErrorHandler)
+ └── Views/             # View files (HTML/PHP templates)
+.env                    # Environment variables (API keys)
+composer.json           # PHP dependencies
+public/index.php        # Application entry point
+
+✅ **Author:** [Armin Pouyani](https://github.com/PouyaniArmin)  
+📅 **Status:** Actively under development
