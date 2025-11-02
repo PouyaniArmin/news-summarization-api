@@ -3,20 +3,18 @@
 A lightweight PHP-based API that fetches news articles using the **GNews API** and generates short summaries of their content.  
 Built with a modular architecture inspired by MVC for easy scalability and future AI model integration.
 ## ⚙️ Installation & Setup  
+## ⚙️ Installation & Setup  
 
 1. **Clone the repository:**  
-   ```bash
-   git clone https://github.com/PouyaniArmin/news-summarization-api.git
-   cd news-summarization-api
-   ```
-## Install dependencies
-    ```bash
-    composer install
-    ```
-## Run the project on a local server
-    ```bash
-    php -S localhost:8000 -t public
-    ```
+2. **Install dependencies:**
+3. **Run the project on a local server**
+
+```bash
+git clone https://github.com/PouyaniArmin/news-summarization-api.git
+cd news-summarization-api
+composer install
+php -S localhost:8000 -t public
+```
 ## 🚀 How It Works  
 
 - **`/home`**  
