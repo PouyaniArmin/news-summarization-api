@@ -1,5 +1,6 @@
 <?php
 
+use App\controllers\AiSummaryController;
 use App\Controllers\HomeController;
 use App\Controllers\SummarizeController;
 use App\Core\App;
@@ -25,6 +26,7 @@ $app = new App(dirname(__DIR__),$router);
 $app->router->get('/home', [HomeController::class, 'index']);
 
 $app->router->get('/api/{id}',[SummarizeController::class,'index']);
+$app->router->get('/ai/{url}',[AiSummaryController::class,'index']);
 
 // Run the application, resolving the request and sending the response
 $app->run();

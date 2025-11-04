@@ -4,6 +4,7 @@
       "App\\": "app/",
       "App\\Controllers\\": "app/controllers/",
       "App\\Core\\": "app/core/",
+      "App\\Core\\AI\\": "app/core/ai",
       "App\\Models\\": "app/models/",
       "App\\Services\\": "app/services/",
       "App\\Utilities\\": "app/utilities/",

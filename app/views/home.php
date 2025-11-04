@@ -21,6 +21,7 @@
             <!-- Buttons -->
             <a href="<?php echo $item['url'] ?>" class="btn btn-primary" target="_blank">Read More</a>
             <a href="/api/<?php echo $i; ?>" class="btn btn-primary" target="_blank">Summarize</a>
+            <a href="/ai/<?php echo $item['url']; ?>" class="btn btn-primary" target="_blank">AI</a>
           </div>
         </div>
       </div>
