@@ -1,12 +1,6 @@
 <?php
-
-
 namespace App\Core;
-
 use App\utilities\ErrorHandler;
-use Dotenv\Dotenv;
-use Dotenv\Parser\Value;
-
 class GnewsApiService
 {
     private $apiKey;
@@ -20,7 +14,6 @@ class GnewsApiService
      */
     public function __construct(Config $config)
     {
-
         $key = $config->getKey('NEWS_API_KEY', 'default_api_key');
         $this->apiKey = $key;
         $this->baseurl = 'https://gnews.io/api/v4/';
