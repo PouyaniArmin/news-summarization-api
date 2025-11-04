@@ -99,7 +99,7 @@ class Router implements RouterInterface
      */
     private function getPatternFromRoute($route)
     {
-        return preg_replace('/\{(\w+)\}/', '(\w+)', $route);
+        return preg_replace('/\{(\w+)\}/', '(.*?)', $route);
     }
 
     /**
