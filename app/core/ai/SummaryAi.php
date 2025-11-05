@@ -42,7 +42,7 @@ class SummaryAi extends AiBase
      *
      * @return string JSON-encoded payload with "inputs" key
      */
-    private function generateSummary(string $url): string
+    private function generateSummary(string $url): mixed
     {
         // Fetch HTML content
         $ch = curl_init();
@@ -52,10 +52,10 @@ class SummaryAi extends AiBase
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         $html = curl_exec($ch);
         curl_close($ch);
-
+        $html=mb_convert_encoding($html,'HTML-ENTITIES', 'UTF-8');
         // Handle fetch failure
         if ($html === false || empty($html)) {
-            return json_encode(["inputs" => "Failed to load URL content."]);
+            return ["inputs" => "Failed to load URL content."];
         }
 
         // Parse HTML and extract <p> tags
@@ -94,7 +94,8 @@ class SummaryAi extends AiBase
         if (strlen($cleanText) < 50) {
             $cleanText = "Not enough text to summarize.";
         }
-
-        return json_encode(["inputs" => $cleanText]);
+        error_log("AI INPUT LENGTH: " . strlen($cleanText));
+        error_log("AI INPUT SAMPLE: " . substr($cleanText, 0, 200));
+        return ["inputs" => $cleanText];
     }
 }
